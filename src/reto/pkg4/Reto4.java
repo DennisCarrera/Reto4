@@ -19,7 +19,7 @@ public class Reto4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char opcion;
-        double costo_boleto;
+        double costo_boleto = 0.0;
         do{
             System.out.println("Indique tipo de boleto");
             opcion = sc.next().charAt(0);
@@ -41,6 +41,7 @@ public class Reto4 {
                     break;
                     
             }
+            System.out.println("Costo del boleto es" + costo_boleto);
             System.out.println("Otro boleto (s/n)?");
         }while(opcion != 'n');
     }
