@@ -5,6 +5,8 @@
  */
 package reto.pkg4;
 
+import java.util.Scanner;
+
 /**
  *
  * @author denni
@@ -15,7 +17,32 @@ public class Reto4 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        char opcion;
+        double costo_boleto;
+        do{
+            System.out.println("Indique tipo de boleto");
+            opcion = sc.next().charAt(0);
+            switch(opcion){
+                case 'A':
+                costo_boleto = 100.00;
+                    break;
+                case 'B':
+                costo_boleto = 70.00;
+                    break;
+                case 'I':
+                costo_boleto = 50.00;        
+                    break;    
+                case 'N':
+                costo_boleto = 70.00;        
+                    break;    
+                default:
+                    System.out.println("Opcion no disponible");
+                    break;
+                    
+            }
+            System.out.println("Otro boleto (s/n)?");
+        }while(opcion != 'n');
     }
     
 }
